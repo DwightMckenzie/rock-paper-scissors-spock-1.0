@@ -74,7 +74,6 @@ window.resetAll = resetAll;
 // random computer choice
 function computerRandomChoice() {
   const computerChoiceNumber = Math.random();
-  // console.log(computerChoiceNumber);
   if (computerChoiceNumber < 0.2) {
     computerChoice = 'rock';
   } else if (computerChoiceNumber <= 0.4) {
@@ -90,15 +89,13 @@ function computerRandomChoice() {
 
 // check result increase scores, update results text
 function updateScore(playerChoice) {
-  // console.log(playerChoice, computerChoice);
   if (playerChoice === computerChoice) {
     resultText.textContent = "It's a tie!";
   } else {
     const choice = choices[playerChoice];
-    // console.log(choice.defeats.indexOf(computerChoice));
     
     if (choice.defeats.indexOf(computerChoice) > -1) {
-      startConfettiInner(); // this line was needing corrected
+      startConfettiInner();
       resultText.textContent = "You Won";
       playerScoreNumber++;
       playerScoreEl.textContent = playerScoreNumber;
@@ -120,7 +117,6 @@ function checkResult(playerChoice) {
 
 // add selected styling and computer choice
 function displayComputerChoice() {
-  // console.log(playerChoice);
 
   // add selected styling and player choice
   switch (computerChoice) {
