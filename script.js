@@ -99,7 +99,7 @@ function updateScore(playerChoice) {
       setTimeout(() => {
         stopConfettiInner();
         removeConfettiInner();
-      }, 3000);
+      }, 6000);
       resultText.textContent = "You Won";
       playerScoreNumber++;
       playerScoreEl.textContent = playerScoreNumber;
