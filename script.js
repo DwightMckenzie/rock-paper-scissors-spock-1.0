@@ -96,13 +96,13 @@ function updateScore(playerChoice) {
     
     if (choice.defeats.indexOf(computerChoice) > -1) {
       startConfettiInner();
-      resultText.textContent = "You Won";
-      playerScoreNumber++;
-      playerScoreEl.textContent = playerScoreNumber;
-      setTimeout(function(){
+      setTimeout(() => {
         stopConfettiInner();
         removeConfettiInner();
       }, 1000);
+      resultText.textContent = "You Won";
+      playerScoreNumber++;
+      playerScoreEl.textContent = playerScoreNumber;
     } else {
       resultText.textContent = "You Loose!";
       computerScoreNumber++;
